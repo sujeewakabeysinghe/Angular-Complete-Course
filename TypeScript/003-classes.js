@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 var MyClass = /** @class */ (function () {
     function MyClass() {
     }
@@ -33,3 +35,15 @@ myPerson.name = 'Sujeewa';
 console.log(myPerson);
 console.log(myPerson.myMethod());
 MyClass.MySaticMethod();
+// 004-interfaces
+var ImplementedLogin = /** @class */ (function () {
+    function ImplementedLogin() {
+    }
+    ImplementedLogin.prototype.login = function () {
+        return 'Logged!';
+    };
+    ImplementedLogin.prototype.registerUser = function () {
+        throw new Error('Method not implemented.');
+    };
+    return ImplementedLogin;
+}());

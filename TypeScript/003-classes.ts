@@ -1,3 +1,6 @@
+// 004-interfaces
+import { Login, MyInterface } from './004-interfaces';
+
 class MyClass {
     age!: number;
     name!: string;
@@ -30,3 +33,13 @@ myPerson.name = 'Sujeewa';
 console.log(myPerson);
 console.log(myPerson.myMethod());
 MyClass.MySaticMethod();
+
+// 004-interfaces
+class ImplementedLogin implements Login {
+    login(): string {
+        return 'Logged!';
+    }
+    registerUser(): MyInterface {
+        throw new Error('Method not implemented.');
+    }
+}
