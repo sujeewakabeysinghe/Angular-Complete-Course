@@ -1,0 +1,20 @@
+<!-- BuiltIn Directives -->
+
+<!-- Structural Directives | Comes with * -->
+
+<div *ngIf="interfaceIf.ngif">{{ interfaceIf.name }} BuiltIn Directive | Structural</div>
+
+<div *ngFor="let name of interfaceFor; let e = even; let i = index" >[{{ i + 1 }}] {{ name.name }} BuiltIn Directive | Structural, This is {{ e ? 'Even' : 'Odd' }} - {{ i }}</div>
+<!-- What you have inside *ngFor like index, even, odd etc. : https://angular.io/api/common/NgFor -->
+
+<div [ngSwitch]="switch">
+    <div *ngSwitchCase="'One'">[1] *ngSwitch BuiltIn Directive | Structural</div>
+    <div *ngSwitchCase="'Two'">[2] *ngSwitch BuiltIn Directive | Structural</div>
+    <div *ngSwitchCase="'Three'">[3] *ngSwitch BuiltIn Directive | Structural</div>
+    <div *ngSwitchDefault>[4] *ngSwitch BuiltIn Directive | Structural - Default</div>
+</div>
+
+<!-- Attribute Directives -->
+
+<div ngClass="ngClass">ngClass</div>
+<div [ngStyle]="{'color' : !interfaceIf.ngif ? 'red' : 'green'}">ngStyle</div>
