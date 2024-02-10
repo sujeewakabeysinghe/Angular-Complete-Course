@@ -3,12 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { RoomsComponent } from './rooms/rooms.component';
+import { BindingSyntaxComponent } from './binding-syntax/binding-syntax.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RoomsComponent
+    BindingSyntaxComponent
   ],
   imports: [
     BrowserModule,

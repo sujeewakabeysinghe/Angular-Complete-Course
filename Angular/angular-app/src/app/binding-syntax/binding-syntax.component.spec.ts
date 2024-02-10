@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RoomsComponent } from './rooms.component';
+import { BindingSyntaxComponent } from './binding-syntax.component';
 
-describe('RoomsComponent', () => {
-  let component: RoomsComponent;
-  let fixture: ComponentFixture<RoomsComponent>;
+describe('BindingSyntaxComponent', () => {
+  let component: BindingSyntaxComponent;
+  let fixture: ComponentFixture<BindingSyntaxComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ RoomsComponent ]
+      declarations: [ BindingSyntaxComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(RoomsComponent);
+    fixture = TestBed.createComponent(BindingSyntaxComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
