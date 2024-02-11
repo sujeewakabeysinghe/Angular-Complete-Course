@@ -13,6 +13,7 @@ import { ComponentCommunicationChildComponent } from './component-communication-
 import { NgOnChangesComponent } from './lifecycle-hooks/ng-on-changes/ng-on-changes.component';
 import { NgOnInitAndConstructorComponent } from './lifecycle-hooks/ng-on-init-and-constructor/ng-on-init-and-constructor.component';
 import { NgDoCheckComponent } from './lifecycle-hooks/ng-do-check/ng-do-check.component';
+import { ViewChildComponent } from './component-communication-parent/view-child/view-child.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { NgDoCheckComponent } from './lifecycle-hooks/ng-do-check/ng-do-check.co
     ComponentCommunicationChildComponent,
     NgOnChangesComponent,
     NgOnInitAndConstructorComponent,
-    NgDoCheckComponent
+    NgDoCheckComponent,
+    ViewChildComponent
   ],
   imports: [
     BrowserModule,
