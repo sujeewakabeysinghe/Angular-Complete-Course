@@ -8,7 +8,9 @@ import { DirectivesComponent } from './directives/directives.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LifecycleHooksComponent } from './lifecycle-hooks/lifecycle-hooks.component';
-import { ComponentCommunicationComponent } from './lifecycle-hooks/component-communication/component-communication.component';
+import { ComponentCommunicationParentComponent } from './component-communication-parent/component-communication-parent.component';
+import { ComponentCommunicationChildComponent } from './component-communication-parent/component-communication-child/component-communication-child.component';
+import { NgOnChangesComponent } from './lifecycle-hooks/ng-on-changes/ng-on-changes.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { ComponentCommunicationComponent } from './lifecycle-hooks/component-com
     DirectivesComponent,
     PipesComponent,
     LifecycleHooksComponent,
-    ComponentCommunicationComponent
+    ComponentCommunicationParentComponent,
+    ComponentCommunicationChildComponent,
+    NgOnChangesComponent
   ],
   imports: [
     BrowserModule,
