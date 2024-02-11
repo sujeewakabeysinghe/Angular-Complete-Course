@@ -1,3 +1,3 @@
-<gtn-component-communication [myInput]="myInput" (myOutput)="myOutputClicked($event)"></gtn-component-communication>
-
-<div>{{clickedInput | json}}</div>
+<!-- ngOnChanges Hook -->
+<gtn-ng-on-changes [myNgOnChanges1]="myNgOnChanges1" [myNgOnChanges2]="myNgOnChanges2"></gtn-ng-on-changes>
+<button type="button" class="btn btn-primary" (click)="addNgOnChanges()">Add NgOnChanges</button>

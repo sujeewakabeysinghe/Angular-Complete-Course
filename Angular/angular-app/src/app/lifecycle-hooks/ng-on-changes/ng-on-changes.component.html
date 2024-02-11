@@ -1,0 +1,14 @@
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">Index</th>
+            <th scope="col">Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let myNgOnChanges of myNgOnChanges1; let i = index">
+            <th scope="row">{{ i }}</th>
+            <td>{{ myNgOnChanges.name }}</td>
+        </tr>
+    </tbody>
+</table>
