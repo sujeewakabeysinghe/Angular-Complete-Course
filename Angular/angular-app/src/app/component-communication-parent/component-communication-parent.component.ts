@@ -1,4 +1,4 @@
-import { AfterViewChecked, AfterViewInit, Component, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
+import { AfterViewChecked, AfterViewInit, Component, ElementRef, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
 import { InterfaceFor } from '../directives/interface';
 import { ViewChildComponent } from './view-child/view-child.component';
 
@@ -8,6 +8,8 @@ import { ViewChildComponent } from './view-child/view-child.component';
   styleUrls: ['./component-communication-parent.component.scss']
 })
 export class ComponentCommunicationParentComponent implements OnInit, AfterViewInit, AfterViewChecked {
+
+  @ViewChild('templateReference', {static: true}) templateReference!: ElementRef;
 
   @ViewChild('dynamicViewChild', {read: ViewContainerRef}) vcr!: ViewContainerRef;
 
@@ -28,6 +30,7 @@ export class ComponentCommunicationParentComponent implements OnInit, AfterViewI
 
   constructor() { }
 
+  // rarely use this | hard to find a usecase
   ngAfterViewChecked(): void {
     this.viewChildComponent1.title = 'ng-after-view-init works!';
   }
@@ -45,6 +48,9 @@ export class ComponentCommunicationParentComponent implements OnInit, AfterViewI
     // add static: true to get that here, make sure you do not have any async in view child component
     console.log(this.viewChildComponent1);
     console.log(this.viewChildComponent2);
+    console.log(this.templateReference);
+    this.templateReference.nativeElement.innerText = 'Template Reference';
+    this.templateReference.nativeElement.className = 'color';
   }
 
 }
