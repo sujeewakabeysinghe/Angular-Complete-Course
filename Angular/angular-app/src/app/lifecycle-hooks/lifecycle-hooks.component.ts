@@ -22,6 +22,11 @@ export class LifecycleHooksComponent implements OnInit {
     this.myNgOnChanges1 = [...this.myNgOnChanges1, newMyNgOnChanges];
   }
 
+  // when this event is getting compiled, even though non-related and separated ngDoCheck component's ngDoCheck also fired
+  addNgDoCheck() {
+    console.log('Hi');
+  }
+
   constructor() {
     console.log('parent constructor works!');
    }
