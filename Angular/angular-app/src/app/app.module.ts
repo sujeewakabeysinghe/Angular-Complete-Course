@@ -7,13 +7,17 @@ import { BindingSyntaxComponent } from './binding-syntax/binding-syntax.componen
 import { DirectivesComponent } from './directives/directives.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LifecycleHooksComponent } from './lifecycle-hooks/lifecycle-hooks.component';
+import { ComponentCommunicationComponent } from './lifecycle-hooks/component-communication/component-communication.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BindingSyntaxComponent,
     DirectivesComponent,
-    PipesComponent
+    PipesComponent,
+    LifecycleHooksComponent,
+    ComponentCommunicationComponent
   ],
   imports: [
     BrowserModule,

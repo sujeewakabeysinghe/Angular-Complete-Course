@@ -1,0 +1,20 @@
+<!-- <div>{{ myInput | json }}</div> -->
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">Index</th>
+            <th scope="col">Name</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let input of myInput; let i = index">
+            <th scope="row">{{ i }}</th>
+            <td>{{ input.name }}</td>
+            <td>
+                <button type="button" class="btn btn-primary" (click)="myOutputClick(input)">My Output</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
