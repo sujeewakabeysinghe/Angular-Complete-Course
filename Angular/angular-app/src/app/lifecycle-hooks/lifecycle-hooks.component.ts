@@ -22,9 +22,12 @@ export class LifecycleHooksComponent implements OnInit {
     this.myNgOnChanges1 = [...this.myNgOnChanges1, newMyNgOnChanges];
   }
 
-  constructor() { }
+  constructor() {
+    console.log('parent constructor works!');
+   }
 
   ngOnInit(): void {
+    console.log('parent ngOnInit works!');
   }
 
 }

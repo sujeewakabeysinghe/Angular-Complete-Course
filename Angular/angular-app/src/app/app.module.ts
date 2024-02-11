@@ -11,6 +11,7 @@ import { LifecycleHooksComponent } from './lifecycle-hooks/lifecycle-hooks.compo
 import { ComponentCommunicationParentComponent } from './component-communication-parent/component-communication-parent.component';
 import { ComponentCommunicationChildComponent } from './component-communication-parent/component-communication-child/component-communication-child.component';
 import { NgOnChangesComponent } from './lifecycle-hooks/ng-on-changes/ng-on-changes.component';
+import { NgOnInitAndConstructorComponent } from './lifecycle-hooks/ng-on-init-and-constructor/ng-on-init-and-constructor.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { NgOnChangesComponent } from './lifecycle-hooks/ng-on-changes/ng-on-chan
     LifecycleHooksComponent,
     ComponentCommunicationParentComponent,
     ComponentCommunicationChildComponent,
-    NgOnChangesComponent
+    NgOnChangesComponent,
+    NgOnInitAndConstructorComponent
   ],
   imports: [
     BrowserModule,
