@@ -16,6 +16,7 @@ import { NgDoCheckComponent } from './lifecycle-hooks/ng-do-check/ng-do-check.co
 import { ViewChildComponent } from './component-communication-parent/view-child/view-child.component';
 import { ContentProjectionComponent } from './lifecycle-hooks/content-projection/content-projection.component';
 import { NgAfterContentInitComponent } from './lifecycle-hooks/ng-after-content-init/ng-after-content-init.component';
+import { NgOnDestroyComponent } from './lifecycle-hooks/ng-on-destroy/ng-on-destroy.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { NgAfterContentInitComponent } from './lifecycle-hooks/ng-after-content-
     NgDoCheckComponent,
     ViewChildComponent,
     ContentProjectionComponent,
-    NgAfterContentInitComponent
+    NgAfterContentInitComponent,
+    NgOnDestroyComponent
   ],
   imports: [
     BrowserModule,

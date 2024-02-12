@@ -17,8 +17,17 @@
     <gtn-ng-on-init-and-constructor></gtn-ng-on-init-and-constructor>
 </gtn-content-projection> -->
 
-<!-- ngAfterContentInit Hook -->
-<gtn-ng-after-content-init [ngAfterContentInitInput]="ngAfterContentInitInput">
+<!-- ngAfterContentInit Hook and ngAfterContentChecked Hook-->
+<!-- <gtn-ng-after-content-init [ngAfterContentInitInput]="ngAfterContentInitInput">
     <p><b>ngAfterContentInit Hook</b></p>
     <gtn-ng-on-init-and-constructor></gtn-ng-on-init-and-constructor>
-</gtn-ng-after-content-init>
+</gtn-ng-after-content-init> -->
+
+<!-- ngOnDestroy Hook -->
+<div *ngIf="onDestroyToggle else elseBlock">
+    <p>ngOnDestroy!</p>
+</div>
+<ng-template #elseBlock>
+    <div><gtn-ng-on-destroy></gtn-ng-on-destroy></div>
+</ng-template>
+<button type="button" class="btn btn-primary" (click)="clickOnDestroyToggle()">OnDestroyToggle</button>

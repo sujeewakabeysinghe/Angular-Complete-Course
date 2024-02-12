@@ -8,6 +8,8 @@ import { InterfaceFor } from '../directives/interface';
 })
 export class LifecycleHooksComponent implements OnInit {
 
+  onDestroyToggle = true;
+
   ngAfterContentInitInput = 'ngAfterContentInit Input';
 
   myNgOnChanges1: InterfaceFor[] = [
@@ -16,6 +18,10 @@ export class LifecycleHooksComponent implements OnInit {
     { name: '*ngFor 3'},
   ]
   myNgOnChanges2 = 3;
+
+  clickOnDestroyToggle() {
+    this.onDestroyToggle = !this.onDestroyToggle;
+  }
 
   addNgOnChanges() {
     this.myNgOnChanges2++;
