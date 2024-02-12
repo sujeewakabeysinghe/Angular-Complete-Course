@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NgOnInitAndConstructorComponent implements OnInit {
 
+  ngAfterContentInit = 'ngAfterContentInit';
+
   // this is getting compiled firstly and only once
   constructor() { 
     console.log('child constructor works!');

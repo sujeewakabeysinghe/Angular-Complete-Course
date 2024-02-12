@@ -10,9 +10,15 @@
 <button type="button" class="btn btn-primary" (click)="addNgDoCheck()">Add NgDoCheck</button> -->
 
 <!-- Content Projection -->
-<gtn-content-projection>
-    <!-- you can set the html content like this -->
+<!-- <gtn-content-projection>
+    <!-- you can set the html content like this
     <p><b>Content Projection</b></p>
     <gtn-ng-do-check></gtn-ng-do-check>
     <gtn-ng-on-init-and-constructor></gtn-ng-on-init-and-constructor>
-</gtn-content-projection>
+</gtn-content-projection> -->
+
+<!-- ngAfterContentInit Hook -->
+<gtn-ng-after-content-init [ngAfterContentInitInput]="ngAfterContentInitInput">
+    <p><b>ngAfterContentInit Hook</b></p>
+    <gtn-ng-on-init-and-constructor></gtn-ng-on-init-and-constructor>
+</gtn-ng-after-content-init>

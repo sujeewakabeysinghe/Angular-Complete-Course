@@ -8,6 +8,8 @@ import { InterfaceFor } from '../directives/interface';
 })
 export class LifecycleHooksComponent implements OnInit {
 
+  ngAfterContentInitInput = 'ngAfterContentInit Input';
+
   myNgOnChanges1: InterfaceFor[] = [
     { name: '*ngFor 1'},
     { name: '*ngFor 2'},
