@@ -6,5 +6,13 @@
 <!-- <gtn-ng-on-init-and-constructor></gtn-ng-on-init-and-constructor> -->
 
 <!-- ngDoCheck Hook -->
-<gtn-ng-do-check></gtn-ng-do-check>
-<button type="button" class="btn btn-primary" (click)="addNgDoCheck()">Add NgDoCheck</button>
+<!-- <gtn-ng-do-check></gtn-ng-do-check>
+<button type="button" class="btn btn-primary" (click)="addNgDoCheck()">Add NgDoCheck</button> -->
+
+<!-- Content Projection -->
+<gtn-content-projection>
+    <!-- you can set the html content like this -->
+    <p><b>Content Projection</b></p>
+    <gtn-ng-do-check></gtn-ng-do-check>
+    <gtn-ng-on-init-and-constructor></gtn-ng-on-init-and-constructor>
+</gtn-content-projection>

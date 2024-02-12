@@ -14,6 +14,7 @@ import { NgOnChangesComponent } from './lifecycle-hooks/ng-on-changes/ng-on-chan
 import { NgOnInitAndConstructorComponent } from './lifecycle-hooks/ng-on-init-and-constructor/ng-on-init-and-constructor.component';
 import { NgDoCheckComponent } from './lifecycle-hooks/ng-do-check/ng-do-check.component';
 import { ViewChildComponent } from './component-communication-parent/view-child/view-child.component';
+import { ContentProjectionComponent } from './lifecycle-hooks/content-projection/content-projection.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ViewChildComponent } from './component-communication-parent/view-child/
     NgOnChangesComponent,
     NgOnInitAndConstructorComponent,
     NgDoCheckComponent,
-    ViewChildComponent
+    ViewChildComponent,
+    ContentProjectionComponent
   ],
   imports: [
     BrowserModule,
