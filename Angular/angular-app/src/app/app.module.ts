@@ -17,6 +17,7 @@ import { ViewChildComponent } from './component-communication-parent/view-child/
 import { ContentProjectionComponent } from './lifecycle-hooks/content-projection/content-projection.component';
 import { NgAfterContentInitComponent } from './lifecycle-hooks/ng-after-content-init/ng-after-content-init.component';
 import { NgOnDestroyComponent } from './lifecycle-hooks/ng-on-destroy/ng-on-destroy.component';
+import { ServiceComponent } from './service/service.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { NgOnDestroyComponent } from './lifecycle-hooks/ng-on-destroy/ng-on-dest
     ViewChildComponent,
     ContentProjectionComponent,
     NgAfterContentInitComponent,
-    NgOnDestroyComponent
+    NgOnDestroyComponent,
+    ServiceComponent
   ],
   imports: [
     BrowserModule,
