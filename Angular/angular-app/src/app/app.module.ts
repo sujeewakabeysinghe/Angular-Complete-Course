@@ -20,6 +20,13 @@ import { NgAfterContentInitComponent } from './lifecycle-hooks/ng-after-content-
 import { NgOnDestroyComponent } from './lifecycle-hooks/ng-on-destroy/ng-on-destroy.component';
 import { ServiceComponent } from './service/service.component';
 import { APP_CONFIG, VALUE_PROVIDER_SERVICE_CONFIG } from './value-providers/value-provider.service';
+import { MatNavComponent } from './mat-nav/mat-nav.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -37,13 +44,20 @@ import { APP_CONFIG, VALUE_PROVIDER_SERVICE_CONFIG } from './value-providers/val
     ContentProjectionComponent,
     NgAfterContentInitComponent,
     NgOnDestroyComponent,
-    ServiceComponent
+    ServiceComponent,
+    MatNavComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule
   ],
   providers: [
     {
