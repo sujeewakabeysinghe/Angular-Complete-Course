@@ -1,10 +1,15 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { shareReplay } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ServiceTwoService {
+
+  getRooms$ = this.http.get<any>('/api/rooms').pipe(
+    shareReplay(1)
+  );
 
   constructor(
     private http : HttpClient
