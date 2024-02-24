@@ -10,6 +10,9 @@ export class ServiceTwoService {
   getRooms$ = this.http.get<any>('/api/rooms').pipe(
     shareReplay(1)
   );
+  errorRooms$ = this.http.get<any>('/api/rmmms').pipe( // here endpoint is incorrect
+    shareReplay(1)
+  );
 
   constructor(
     private http : HttpClient
