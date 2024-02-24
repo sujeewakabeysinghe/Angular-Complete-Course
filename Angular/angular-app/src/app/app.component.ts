@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
+import { LOCAL_STORAGE_TOKEN } from './value-providers/local-storage.token';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +8,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
   // styles: ['h1  { color: red }'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'angular-app';
+  constructor(
+    @Inject(LOCAL_STORAGE_TOKEN) private localStorage : Storage,
+  ) {}
+
+  ngOnInit(): void {
+    this.localStorage.setItem('Test Local Storage', 'It works.');
+  }
 }
