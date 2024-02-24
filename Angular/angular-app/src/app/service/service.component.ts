@@ -21,11 +21,39 @@ export class ServiceComponent implements OnInit {
 
   ngOnInit(): void {
     this.serviceOneItems = this.serviceOne.getServiceOneData();
-    this.serviceTwo.getUsers().subscribe( room => {
-      this.roomsList = room
+    this.serviceTwo.getRooms().subscribe( room => {
+      this.roomsList = room;
     });
     console.log(this.roomsList);
-    console.log(this.serviceTwo.getUsers());
+    console.log(this.serviceTwo.getRooms());
   }
 
+  addRoom() {
+    const room = {
+      roomType: 'Add Room',
+    };
+    this.serviceTwo.addRooms(room).subscribe( room => {
+      this.roomsList = room;
+    });
+  }
+
+  editRoom() {
+    const room = {
+      roomNumber: '1',
+      roomType: 'Edit Room'
+    };
+    this.serviceTwo.editRooms(room).subscribe( room => {
+      this.roomsList = room;
+    });
+  }
+  
+  deleteRoom() {
+    const room = {
+      roomNumber: '1',
+      roomType: 'Edit Room'
+    }; 
+    this.serviceTwo.deleteRooms(room.roomNumber).subscribe( room => {
+      this.roomsList = room;
+    });
+  }
 }

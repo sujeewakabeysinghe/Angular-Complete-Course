@@ -5,3 +5,9 @@
 <div *ngFor="let room of roomsList">
     {{ room.roomType }}
 </div>
+
+<button class="btn btn-primary m-1" (click)="addRoom()">Add Room</button>
+
+<button class="btn btn-primary m-1" (click)="editRoom()">Edit Room</button>
+
+<button class="btn btn-primary m-1" (click)="deleteRoom()">Delete Room</button>

@@ -10,7 +10,19 @@ export class ServiceTwoService {
     private http : HttpClient
   ) { }
 
-  getUsers() {
+  getRooms() {
     return this.http.get<any>('/api/rooms');
+  }
+  
+  addRooms(room: any) {
+    return this.http.post<any>('/api/rooms', room);
+  }
+
+  editRooms(room: any) {
+    return this.http.put<any>(`/api/rooms/${room.roomNumber}`, room);
+  }
+  
+  deleteRooms(id: any) {
+    return this.http.delete<any>(`/api/rooms/${id}`);
   }
 }
