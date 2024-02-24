@@ -16,3 +16,9 @@
 <div>{{ json | json }}</div>
 
 <div>{{ slice | slice : 2:4 }}</div>
+
+<div *ngFor="let room of roomList">
+    {{room.roomType}}
+</div>
+
+<div>{{ rooms$ | async | json}}</div>
