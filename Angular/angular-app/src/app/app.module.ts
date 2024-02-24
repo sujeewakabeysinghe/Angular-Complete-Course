@@ -18,6 +18,7 @@ import { ContentProjectionComponent } from './lifecycle-hooks/content-projection
 import { NgAfterContentInitComponent } from './lifecycle-hooks/ng-after-content-init/ng-after-content-init.component';
 import { NgOnDestroyComponent } from './lifecycle-hooks/ng-on-destroy/ng-on-destroy.component';
 import { ServiceComponent } from './service/service.component';
+import { APP_CONFIG, VALUE_PROVIDER_SERVICE_CONFIG } from './value-providers/value-provider.service';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,12 @@ import { ServiceComponent } from './service/service.component';
     AppRoutingModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: VALUE_PROVIDER_SERVICE_CONFIG,
+      useValue: APP_CONFIG
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
