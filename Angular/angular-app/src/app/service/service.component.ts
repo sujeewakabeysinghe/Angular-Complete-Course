@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ServiceOneService } from '../services/service-one.service';
 import { InterfaceFor } from '../directives/interface';
+import { ServiceTwoService } from '../services/service-two.service';
 
 @Component({
   selector: 'gtn-service',
@@ -11,13 +12,20 @@ import { InterfaceFor } from '../directives/interface';
 export class ServiceComponent implements OnInit {
 
   serviceOneItems!: InterfaceFor[];
+  roomsList: any;
 
   constructor(
-    private serviceOne: ServiceOneService // nomally this make private, and do not make it public to access to directly to the html
+    private serviceOne: ServiceOneService, // nomally this make private, and do not make it public to access to directly to the html
+    private serviceTwo: ServiceTwoService
   ) { }
 
   ngOnInit(): void {
     this.serviceOneItems = this.serviceOne.getServiceOneData();
+    this.serviceTwo.getUsers().subscribe( room => {
+      this.roomsList = room
+    });
+    console.log(this.roomsList);
+    console.log(this.serviceTwo.getUsers());
   }
 
 }
