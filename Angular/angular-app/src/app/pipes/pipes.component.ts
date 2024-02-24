@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { InterfaceFor } from '../directives/interface';
-import { Subscription, catchError, of } from 'rxjs';
+import { Subscription, catchError, map, of } from 'rxjs';
 import { ServiceTwoService } from '../services/service-two.service';
 
 @Component({
@@ -31,6 +31,10 @@ export class PipesComponent implements OnInit, OnDestroy {
       console.log(err);
       return of(['Error handled!']);
     })
+  );
+  
+  roomsModify$ = this.serviceTwo.getRooms$.pipe(
+    map( room => room.lenght )
   );
 
   constructor(
