@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'gtn-forms',
@@ -16,8 +17,12 @@ export class FormsComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  addRooms() {
+  addRooms(addRoomsForm: NgForm) {
     console.log(this.room);
+    // addRoomsForm.reset(); // reset to a fresh form which everything is empty
+    addRoomsForm.resetForm({
+      roomType: 'Default Data'
+    });
   }
 
 }
