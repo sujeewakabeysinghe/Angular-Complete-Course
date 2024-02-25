@@ -29,6 +29,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { DynamicRoutesComponent } from './dynamic-routes/dynamic-routes.component';
 import { ActivatedRoutesComponent } from './activated-routes/activated-routes.component';
+import { FormsModule } from '@angular/forms';
+import { FormsComponent } from './forms/forms.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +51,8 @@ import { ActivatedRoutesComponent } from './activated-routes/activated-routes.co
     ServiceComponent,
     MatNavComponent,
     DynamicRoutesComponent,
-    ActivatedRoutesComponent
+    ActivatedRoutesComponent,
+    FormsComponent
   ],
   imports: [
     BrowserModule,
@@ -61,7 +64,8 @@ import { ActivatedRoutesComponent } from './activated-routes/activated-routes.co
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    FormsModule
   ],
   providers: [
     {

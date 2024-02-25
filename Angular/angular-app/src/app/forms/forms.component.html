@@ -1,0 +1,21 @@
+<form #addRoomsForm="ngForm" class="m-3" (ngSubmit)="addRooms()">
+    <input required [(ngModel)]="room.roomType" type="text" name="roomType" placeholder="Room Type">
+    <br><br>
+    <input required minlength="2" maxlength="6" #roomDetailsModel="ngModel" [(ngModel)]="room.roomDetails" type="text" name="roomDetails" placeholder="Room Details">
+    <div>{{ roomDetailsModel.errors | json}}</div>
+    <br><br>
+    <input required min="2" max="6" [(ngModel)]="room.roomQuantity" type="number" name="roomQuantity">
+    <br><br> 
+    <input required email [(ngModel)]="room.roomEmail" type="email" name="roomEmail">
+    <input required pattern="yourRegularExpression" [(ngModel)]="room.roomEmail" type="email" name="roomEmail">
+    <br><br> 
+    <button [disabled]="addRoomsForm.invalid" type="submit" class="btn btn-primary">Add Room</button>
+</form>
+<hr>
+<div>{{ room | json}}</div>
+<hr>
+<div>{{ addRoomsForm.pristine }}</div>
+<div>{{ addRoomsForm.dirty }}</div>
+<div>{{ addRoomsForm.valid }}</div>
+<div>{{ addRoomsForm.invalid }}</div>
+<div>{{ addRoomsForm.value | json }}</div>
