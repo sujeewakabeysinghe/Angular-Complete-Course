@@ -28,6 +28,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { DynamicRoutesComponent } from './dynamic-routes/dynamic-routes.component';
+import { ActivatedRoutesComponent } from './activated-routes/activated-routes.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { DynamicRoutesComponent } from './dynamic-routes/dynamic-routes.componen
     NgOnDestroyComponent,
     ServiceComponent,
     MatNavComponent,
-    DynamicRoutesComponent
+    DynamicRoutesComponent,
+    ActivatedRoutesComponent
   ],
   imports: [
     BrowserModule,
