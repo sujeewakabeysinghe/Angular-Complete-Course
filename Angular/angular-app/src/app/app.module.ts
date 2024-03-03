@@ -31,6 +31,7 @@ import { DynamicRoutesComponent } from './dynamic-routes/dynamic-routes.componen
 import { ActivatedRoutesComponent } from './activated-routes/activated-routes.component';
 import { FormsModule } from '@angular/forms';
 import { FormsComponent } from './forms/forms.component';
+import { CustomDirectiveDirective } from './forms/custom-directive.directive';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { FormsComponent } from './forms/forms.component';
     MatNavComponent,
     DynamicRoutesComponent,
     ActivatedRoutesComponent,
-    FormsComponent
+    FormsComponent,
+    CustomDirectiveDirective
   ],
   imports: [
     BrowserModule,
