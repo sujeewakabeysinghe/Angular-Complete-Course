@@ -32,6 +32,7 @@ import { ActivatedRoutesComponent } from './activated-routes/activated-routes.co
 import { FormsModule } from '@angular/forms';
 import { FormsComponent } from './forms/forms.component';
 import { CustomDirectiveDirective } from './forms/custom-directive.directive';
+import { CustomDirectiveValidatorDirective } from './forms/custom-directive-validator.directive';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { CustomDirectiveDirective } from './forms/custom-directive.directive';
     DynamicRoutesComponent,
     ActivatedRoutesComponent,
     FormsComponent,
-    CustomDirectiveDirective
+    CustomDirectiveDirective,
+    CustomDirectiveValidatorDirective,
   ],
   imports: [
     BrowserModule,

@@ -20,18 +20,18 @@ export class FormsComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  addRooms(addRoomsForm: NgForm) {
-    console.log(this.room);
-    // addRoomsForm.reset(); // reset to a fresh form which everything is empty
-    addRoomsForm.resetForm({
-      roomType: 'Default Data'
-    });
-  }
+  // addRooms(addRoomsForm: NgForm) {
+  //   console.log(this.room);
+  //   // addRoomsForm.reset(); // reset to a fresh form which everything is empty
+  //   addRoomsForm.resetForm({
+  //     roomType: 'Default Data'
+  //   });
+  // }
 
-  login() {
-    if(this.email === 'email.com' && this.password === 'pass') {
-      alert('Matched!')
-    }
-  }
+  // login() {
+  //   if(this.email === 'email.com' && this.password === 'pass') {
+  //     alert('Matched!')
+  //   }
+  // }
 
 }
