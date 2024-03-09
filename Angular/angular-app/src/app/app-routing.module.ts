@@ -6,6 +6,8 @@ import { BindingSyntaxComponent } from './binding-syntax/binding-syntax.componen
 import { ServiceComponent } from './service/service.component';
 import { DynamicRoutesComponent } from './dynamic-routes/dynamic-routes.component';
 import { ActivatedRoutesComponent } from './activated-routes/activated-routes.component';
+import { ComponentOneComponent } from './component-one/component-one.component';
+import { ComponentTwoComponent } from './component-two/component-two.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/directives', pathMatch: 'full' },
@@ -13,6 +15,14 @@ const routes: Routes = [
   { path: 'directives', component: DirectivesComponent },
   { path: 'dynamic-route', component: DynamicRoutesComponent },
   { path: 'dynamic-route/:paramID', component: ActivatedRoutesComponent },
+  {
+    path: 'one',
+    component: ComponentOneComponent,
+    children: [{
+      path: 'two',
+      component: ComponentTwoComponent
+    }]
+  },
   { path: '**', component: BindingSyntaxComponent }
 ];
 

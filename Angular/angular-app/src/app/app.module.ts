@@ -34,6 +34,7 @@ import { FormsComponent } from './forms/forms.component';
 import { CustomDirectiveDirective } from './forms/custom-directive.directive';
 import { CustomDirectiveValidatorDirective } from './forms/custom-directive-validator.directive';
 import { FeatureModuleAndRoutingModule } from './feature-module-and-routing/feature-module-and-routing.module';
+import { ComponentTwoComponent } from './component-two/component-two.component';
 
 @NgModule({
   declarations: [
@@ -58,6 +59,7 @@ import { FeatureModuleAndRoutingModule } from './feature-module-and-routing/feat
     FormsComponent,
     CustomDirectiveDirective,
     CustomDirectiveValidatorDirective,
+    ComponentTwoComponent,
   ],
   imports: [
     BrowserModule,
