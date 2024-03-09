@@ -23,6 +23,10 @@ const routes: Routes = [
       component: ComponentTwoComponent
     }]
   },
+  { 
+    path: 'lazy',
+    loadChildren: () => import('./feature-module-and-routing/feature-module-and-routing.module').then(mod => mod.FeatureModuleAndRoutingModule)
+  },
   { path: '**', component: BindingSyntaxComponent }
 ];
 

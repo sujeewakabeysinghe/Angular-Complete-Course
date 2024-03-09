@@ -73,7 +73,7 @@ import { ComponentTwoComponent } from './component-two/component-two.component';
     MatIconModule,
     MatListModule,
     FormsModule,
-    FeatureModuleAndRoutingModule,
+    // FeatureModuleAndRoutingModule,
   ],
   providers: [
     {
