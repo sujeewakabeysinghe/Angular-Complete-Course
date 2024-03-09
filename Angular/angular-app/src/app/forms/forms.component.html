@@ -20,11 +20,11 @@
 <div>{{ addRoomsForm.invalid }}</div>
 <div>{{ addRoomsForm.value | json }}</div> -->
 
-<!-- <form>
+<form>
     <input gtnCustomDirective [(ngModel)]="email" type="email" name="email" placeholder="Email"><br><br>
     <input gtnCustomDirective="black" [(ngModel)]="password" type="password" name="password" placeholder="Password"><br><br>
     <button (click)="login()">Login</button>
-</form> -->
+</form>
 
-<input gtnCustomDirectiveValidator #emailControl="ngModel" [(ngModel)]="email" type="email" name="email" placeholder="Email">
-<p>{{ emailControl.errors | json }}</p>
+<!-- <input gtnCustomDirectiveValidator #emailControl="ngModel" [(ngModel)]="email" type="email" name="email" placeholder="Email">
+<p>{{ emailControl.errors | json }}</p> -->
