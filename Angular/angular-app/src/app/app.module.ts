@@ -33,6 +33,7 @@ import { FormsModule } from '@angular/forms';
 import { FormsComponent } from './forms/forms.component';
 import { CustomDirectiveDirective } from './forms/custom-directive.directive';
 import { CustomDirectiveValidatorDirective } from './forms/custom-directive-validator.directive';
+import { FeatureModuleAndRoutingModule } from './feature-module-and-routing/feature-module-and-routing.module';
 
 @NgModule({
   declarations: [
@@ -69,7 +70,8 @@ import { CustomDirectiveValidatorDirective } from './forms/custom-directive-vali
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    FormsModule
+    FormsModule,
+    FeatureModuleAndRoutingModule,
   ],
   providers: [
     {
