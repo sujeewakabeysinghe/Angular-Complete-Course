@@ -1,0 +1,13 @@
+<p>{{ reactiveForm.value | json }}</p>
+<p>{{ reactiveForm.pristine | json }}</p>
+<p>{{ reactiveForm.dirty | json }}</p>
+
+<form [formGroup]="reactiveForm" (ngSubmit)="formSubmit()">
+    <input type="text" formControlName="formName"><br><br>
+    <input type="number" formControlName="formNumber"><br><br>
+    <div formGroupName="nestedGroup">
+        <input type="text" formControlName="nestedName"><br><br>
+        <input type="number" formControlName="nestedNumber"><br><br>
+    </div>
+    <button type="submit">Submit Form</button>
+</form>

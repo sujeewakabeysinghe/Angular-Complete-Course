@@ -29,12 +29,13 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { DynamicRoutesComponent } from './dynamic-routes/dynamic-routes.component';
 import { ActivatedRoutesComponent } from './activated-routes/activated-routes.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormsComponent } from './forms/forms.component';
 import { CustomDirectiveDirective } from './forms/custom-directive.directive';
 import { CustomDirectiveValidatorDirective } from './forms/custom-directive-validator.directive';
 import { FeatureModuleAndRoutingModule } from './feature-module-and-routing/feature-module-and-routing.module';
 import { ComponentTwoComponent } from './component-two/component-two.component';
+import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
 
 @NgModule({
   declarations: [
@@ -60,6 +61,7 @@ import { ComponentTwoComponent } from './component-two/component-two.component';
     CustomDirectiveDirective,
     CustomDirectiveValidatorDirective,
     ComponentTwoComponent,
+    ReactiveFormsComponent,
   ],
   imports: [
     BrowserModule,
@@ -74,6 +76,7 @@ import { ComponentTwoComponent } from './component-two/component-two.component';
     MatListModule,
     FormsModule,
     // FeatureModuleAndRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [
     {
